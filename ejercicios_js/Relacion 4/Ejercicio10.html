@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    function pelicula(id,titulo,director,año,pais,genero,calificacion) {
+        console.log("Pelicula")
+        var comprobacionID = /^([a-zA-Z]{2})([0-9]{2})/.test(id);
+        if (comprobacionID == true) {
+            this.id = id;
+        } else {
+            console.log(`El ${id} no es valido.`)
+        }
+        tituloArray = Array.from(titulo);
+        if (tituloArray.length < 100) {
+            this.titulo = titulo;
+        } else {
+            console.log(`El titulo ${titulo} tiene mas de 100 caracteres.`);
+        }
+        this.director = director;
+        if(año.toString().length == 4) {
+            this.año = año;
+        } else {
+            console.log(`El año ${año} no tiene 4 digitos.`);
+        }
+        var arrayAux = [];
+        if(pais.typeOf == arrayAux.typeOf) {
+            this.pais = pais;
+        } else {
+            console.log(`El ${pais} no está siendo pasado como array`);
+        }
+        var generosValidos = ["Action","Adult", "Adventure", "Animation", "Biography", "Comedy", "Crime", "Documentary" ,"Drama", "Family", "Fantasy", "Film" ,
+        "Noir", "Game-Show", "History", "Horror", "Musical", "Music", "Mystery", "News", "Reality-TV", "Romance", "Sci-Fi", "Short", "Sport", "Talk-Show", "Thriller", "War", "Western"]
+        var boolAux = false;
+        for (i=0;i<generosValidos.length;i++) {
+            if (generosValidos[i] == genero) {
+                this.genero = genero;
+                boolAux = true;
+            }
+        }
+        if (boolAux == false) {
+            console.log(`El genero ${genero} no se encuentra entre los generos validos`);
+        }
+        this.calificacion = calificacion;
+    }
+
+    function creacionPeliculas(array) {
+       console.log(array[0]);
+        var peli1 = new pelicula(array[0]);
+        console.log(peli1);
+        Pelicula2 = new pelicula(array[1]);
+        Pelicula3 = new pelicula(array[2]);
+        var resultado = {Pelicula,Pelicula2,Pelicula3};
+        for(i=0;i<resultado.length-1;i++) {
+            console.log(resultado[i]);
+        }
+    }
+    
+    var Pelicula = new pelicula("AD123456789","Torrente","Leandro",2004,["España"],"Action",8.5);
+        var Pelicula1 = new pelicula("AD198754","Torrente1","Cristobal",2004,["Francia"],"Musical",9.8);
+        var Pelicula2 = new pelicula("AD324678","Torrente2","Luis",2004,["España"],"Musical",7);
+        var arrayPelicula = [
+            { id: "AD123456789", titulo: "Torrente", director: "Leandro", año: 2004, pais: ["España"], genero: "Action", calificacion: 8.5 },
+            { id: "AD198754", titulo: "Torrente1", director: "Cristobal", año: 2000, pais: ["Francia"], genero: "Musical", calificacion: 8 },
+            { id: "AD324678", titulo: "Torrente2", director: "Luis", año: 2002, pais: ["España"], genero: "Musical", calificacion: 7 }
+        ]
+        var arrayPelis= [Pelicula,Pelicula1,Pelicula2];
+        console.log(arrayPelis)
+</script>
+<form>
+    Id pelicula: <input type="text" name="id"><br>
+    Título:<input type="text" name="titulo"><br>
+    Director:<input type="text" name="director"><br>
+    año de estreno:<input type="text" name="anio"><br>
+    país o países de origen:<input type="" name="paises"><br>
+    género:<input type="text" name="genero"><br>
+    calificación:<input type="text" name="calf"><br>
+    <input type="submit" value="Crear pelicula" name="crear" onclick="pelicula(id.value, titulo.value, director.value,anio.value, paises.value, genero.value, calf.value)">
+    <input type="submit" value="Mostrar pelicula" name="mostrar" onclick="mostrar(id.value, titulo.value, director.value,anio.value, paises.value, genero.value, calf.value)">
+
+</form>
+</body>
+</html>

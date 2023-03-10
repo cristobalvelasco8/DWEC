@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta  charset="UTF-8" />
+<title>Ejercicio 3 - DOM</title>
+ 
+
+</head>
+ 
+<body>
+<script type="text/javascript">
+
+  function añadirElemento(){
+    var diarios = ["Marca", "As", "Mundo Deportivo", "Sport", "L'equipe", "La Gazzeta Deportiva"];
+    var lista = document.getElementById("diariosdeportivos");
+    var elemento = document.createElement("li");
+    elemento.innerHTML = diarios[Math.round(Math.random()*5)];
+    lista.appendChild(elemento);
+  }
+
+</script>
+<ul id="diariosdeportivos">
+  <li>Marca</li>
+  <li>As</li>
+  <li>Mundo deportivo</li>
+  <li>Sport</li>
+  <li>L'equipe</li>
+</ul>
+ 
+<input type="button" value="Añadir elemento" onclick="añadirElemento()">
+ 
+</body>
+</html>

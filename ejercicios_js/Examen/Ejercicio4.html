@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .oculto {
+          display: none;
+        }
+        .visible {
+          display: block;
+        }
+      </style>
+</head>
+<body>
+
+</body>
+
+<form>
+    <input type="text" id="text"  name="texto"  class="oculto"><br>
+    <input type="button" value="Botton1" id="enviar1" onclick="rojo();">
+    <input type="button" value="Botton2" id="enviar2" onclick="aparece();">
+    <input type="button" value="Botton3" id="enviar3"  >
+    <input type="button" value="Botton4" id="enviar4" onclick="invertirCad(texto.value)">
+    <input type="button" value="Botton5" id="enviar5">
+</form>
+<script>
+  function aparece() {
+     document.getElementById('text').className = "visible";
+     
+   
+   }
+ 
+   function rojo(){
+         document.body.style.backgroundColor = 'red';
+     }
+     function invertirCad(cad) {
+        if ( document.getElementById('text').style.display = 'block'){
+         document.getElementById('text').className = "visible"; 
+        }
+  
+             var cadInvertida = cad.split("").reverse().join("");
+             return document.write("La cadena " + cad + " invertida es: " + cadInvertida);
+             
+ 
+         }
+         
+ 
+         var enviar3 = document.getElementById('enviar3').addEventListener("click", function(){
+             document.getElementById('text').value = "Estoy dentro del cuadro de texto";
+             document.getElementById('text').style.display = 'block';
+             document.getElementById('text').style.backgroundColor = 'green';
+             document.getElementById('text').style.color = 'white';
+         });
+ 
+         var enviar5 = document.getElementById('enviar5').addEventListener("click", function(){
+             var text = document.getElementById('text').value = "Estoy dentro del cuadro de texto";
+             numeroCaracteres = text.length;
+             document.documentElement.innerHTML = "El texto tiene " + numeroCaracteres;
+             document.getElementById('text').style.display = 'block';
+             document.bgColor = 'white';
+         });
+ </script>
+</html>

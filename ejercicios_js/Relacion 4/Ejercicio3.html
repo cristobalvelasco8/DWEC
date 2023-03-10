@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3) Realizar una función javascript que elimine una subcadena de texto de un texto dado</title>
+</head>
+<script>
+function eliminarcad (cadena,palabra) {
+var newstr = cadena.replace(palabra, "");
+return document.write(newstr);
+}
+</script>
+<body>
+    <form>
+        <input type="text" id="t1" name="cadena" value="Escriba una cadena "></br>
+        <input type="text" id="t1" name="palabra" value="Escriba una palabra para eliminar"></br>
+        <input type="button" id="b1" name="button1" value="Eliminar" onclick="eliminarcad(cadena.value,palabra.value)"></br>
+    </form>
+</body>
+</html>

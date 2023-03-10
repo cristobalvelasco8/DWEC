@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Rellene tus datos</h1>
+
+    <form>
+      Nombre: <input type="text" id="nombre" name="nombre" value="" /> 
+      Apellidos: <input type="text" id="apellidos" name="apellidos" value=""/><br />
+      <input type="button" value="Enviar" onclick="enviar(nombre.value, apellidos.value)" />
+      <input type="button" value="Limpiar" onclick="limpia()" />
+    </form>
+
+    <p id="parrafo">
+
+    </p>
+
+
+    <script>
+      function enviar(nombre, apellidos) {
+        let texto = document.getElementById("parrafo");
+        let nuevoElemento = `Hola, bienvenido ${nombre} ${apellidos}`;
+        texto.innerHTML += nuevoElemento;
+      }
+      function limpia(){
+        let texto = document.getElementById("parrafo");
+        texto.innerHTML = " ";
+        document.getElementById("nombre").value = " ";
+        document.getElementById("apellidos").value = " ";
+      }
+    </script>
+  </body>
+</html>

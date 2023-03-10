@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="parrafos">
+        <ul>
+            <li>
+            primero
+            </li>
+            <li>
+                segundo
+                </li>
+                <li>
+                    tercero
+                    </li>
+                    <li>
+                        cuarto
+                        </li>
+        </ul>
+    </div>
+    <button onclick="ordenarLista()">Ordenar Parrafos</button>
+
+    <script>
+       function ordenarLista() {
+    let parrafos=document.querySelectorAll("p");
+    let arrayParrafos=[...parrafos];
+    let arrayParrafosInvertidos=arrayParrafos.reverse();
+    document.getElementById("parrafos").innerHTML="";
+    arrayParrafosInvertidos.forEach((parrafo) => {
+        document.getElementById("parrafos").innerHTML+=parrafo.outerHTML;
+    });
+}
+
+     
+
+    </script>
+    
+</body>
+</html>

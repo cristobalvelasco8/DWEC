@@ -1,0 +1,31 @@
+<html>
+<head>
+<title>4) Realizar una función javascript que reciba un número y compruebe si es capicúa o no</title>
+<script language="JavaScript">
+
+function esCapicuaDefinicion(cadena) {
+
+   var cadena2 = cadena.split("").reverse().join("");
+    if (cadena == cadena2) {
+        return document.write("El número " + cadena + " es capicua");
+
+    
+    }
+    else {
+        return document.write("El número " + cadena + " no es capicua");
+    }
+
+    
+}
+
+ 
+
+     </script>
+     <form>
+        <input type="text" id="t1" name="texto" value="Escriba un número"></br>
+        <input type="button" id="b1" name="button1" value="Invertir" onclick="esCapicuaDefinicion(texto.value)"></br>
+    </form>
+</body>
+
+
+</html>

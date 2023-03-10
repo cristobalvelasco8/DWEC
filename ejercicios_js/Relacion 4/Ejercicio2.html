@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Realizar una función javascript con notación “Arrow function” para contar el número de veces que se
+      repite una subcadena en una cadena de texto </title>
+
+    <script>
+      cadena = (palabra, array) => {
+        var indices = [];
+        var encontradas = array.indexOf(palabra);
+        while (encontradas != -1) {
+          indices.push(encontradas);
+          encontradas = array.indexOf(palabra, encontradas + 1);
+        }
+        document.write(indices.length);
+      };
+    </script>
+  </head>
+  <body>
+    <form>
+      <input type="text" name="array" value="Cadena" /><br />
+      <input type="text" name="palabra" value="Palabra a buscar" /><br />
+      <input type="submit" value="Contar" onclick="cadena(palabra.value, array.value)"/>
+    </form>
+  </body>
+</html>

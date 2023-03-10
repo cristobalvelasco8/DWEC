@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>8) Realizar una función que al pasarle un array de números como parámetro, devuelva un objeto con 2
+        arrays, en el primero almacena los números pares y en el segundo los impares, pe.
+        miFuncion([1,2,3,4,5,6,7,8,9,0]) devolverá {pares: [2,4,6,8,0], impares: [1,3,5,7,9]}.</title>
+</head>
+<script>
+ pareseimpares = (num1, num2, num3, num4, num5) => {
+          var numeros = [num1, num2, num3, num4, num5];
+          var impares = [];
+          var pares = [];
+
+        var p = 0;
+        var im = 0;
+          for (var i = 0; i < numeros.length; i++) {
+              if (numeros[i] %2 == 0) {
+                  pares[p] = numeros[i];
+                  p++;
+              }
+              if (numeros[i] %2 != 0) {
+                  impares[im] = numeros[i];
+                  im++;
+              }
+
+          }
+
+
+          document.write("Pares" +pares + "<br>" + "Impares" + impares);
+
+      }
+</script>
+<body>
+  <form>
+    <input type="number" name="num1" /><br />
+    <input type="number" name="num2" /><br />
+    <input type="number" name="num3" /><br />
+    <input type="number" name="num4" /><br />
+    <input type="number" name="num5" /><br />
+
+    <input
+      type="submit"
+      value="Comparar"
+      onclick="pareseimpares(num1.value, num2.value, num3.value, num4.value, num5.value)"
+    />
+  </form>
+</body>
+</html>

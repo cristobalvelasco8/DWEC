@@ -1,0 +1,36 @@
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ejercicio 8</title>
+    <script type = "text/javascript">
+        var numAzar = 0;
+
+        function restablecerNumAzar() {
+            numAzar = Math.round(Math.random()*100);
+        }
+
+        function numAcertado(num){
+            // document.write("<h3>" + numAzar+ "</h3>");
+            if(numAzar != num){
+                document.getElementById('result').innerHTML = "<h3>Has fallado </h3>";
+            }else{
+                document.getElementById('result').innerHTML = "<h3>Has acertado</h3>";
+                // document.write("<h3>Has asertado</h3>");
+            }
+        }
+        restablecerNumAzar();
+    </script>
+</head>
+<body>
+    <h2>GTA V</h2>
+    <form>
+        <input type="number" name="numero" value="Introduzca numero">
+
+        <input type="button" value="Ejecutar" onclick="numAcertado(numero.value)">
+
+        <p id="result"></p>
+    </form>
+</body>
+</html>

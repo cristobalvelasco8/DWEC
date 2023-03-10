@@ -1,0 +1,28 @@
+{
+  "Futbolistas": [
+    {
+      "id": 2,
+      "nombre": "Messi",
+      "posicion": "Delantero",
+      "precio": "130M"
+    },
+    {
+      "id": 3,
+      "nombre": "Mbappe",
+      "posicion": "delantero",
+      "precio": "200M"
+    },
+    {
+      "id": 4,
+      "nombre": "Sergio Ramos",
+      "posicion": "defensa",
+      "precio": "100M"
+    },
+    {
+      "id": 5,
+      "nombre": "Thibaut Courtois",
+      "posicion": "Portero",
+      "precio": "40M"
+    }
+  ]
+}

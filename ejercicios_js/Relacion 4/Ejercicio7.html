@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      7) Realizar una función javascript con notación “Arrow function” que dado
+      un array como parámetro, devuelva un array con el mayor y el menor número
+      encontrados en el array pasado como parámetro
+    </title>
+  </head>
+  <script>
+   mayormenor = (num1, num2, num3, num4, num5,num6) => {
+            var numeros = [num1, num2, num3, num4, num5,num6];
+            var mayor = 0;
+            var menor = 99999;
+            for (var i = 0; i < numeros.length; i++) {
+                if (numeros[i] > mayor) {
+                    mayor = numeros[i];
+                }
+                if (numeros[i] < menor) {
+                    menor = numeros[i];
+                }
+
+            }
+
+            var mayMen = [mayor, menor];
+
+            document.write(mayMen);
+
+        }
+  </script>
+  <body>
+    <form>
+      <input type="number" name="num1" /><br />
+      <input type="number" name="num2" /><br />
+      <input type="number" name="num3" /><br />
+      <input type="number" name="num4" /><br />
+      <input type="number" name="num5" /><br />
+      <input type="number" name="num6" /><br />
+
+      <input
+        type="submit"
+        value="Comparar"
+        onclick="mayormenor(num1.value, num2.value, num3.value, num4.value, num5.value,num6.value)"
+      />
+    </form>
+  </body>
+</html>

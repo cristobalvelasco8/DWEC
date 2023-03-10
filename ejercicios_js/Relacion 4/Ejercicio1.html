@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>1) Realizar una función javascript que invierta las palabras de una cadena de texto,
+        Ej: invertir(“Miguel Angel”) devolverá “legnA leugiM”.
+        Nota: Array.from(), split(), spread operator, for of</title>
+</head>
+
+<body>
+    <script>
+        function invertirCad(cad) {
+            var cadInvertida = cad.split("").reverse().join("");
+            return document.write("La cadena " + cad + " invertida es: " + cadInvertida);
+        }
+    </script>
+
+    <form>
+        <input type="text" id="t1" name="texto" value="Escriba una cadena para mostrar la inversa"></br>
+        <input type="button" id="b1" name="button1" value="Invertir" onclick="invertirCad(texto.value)"></br>
+    </form>
+</body>
+
+</html>

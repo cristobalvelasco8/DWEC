@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD Futbolistas</title>
+</head>
+
+<body>
+    <h1>Futbolistas</h1>
+    <section class="crud">
+        <div>
+            <h2 class="crud-titulo">Agregar Futbolistas</h2>
+            <form class="crud-form">
+                <input type="text" name="nombre" placeholder="nombre" required>
+                <br>
+                <input type="text" name="posicion" placeholder="posicion" required>
+                <br>
+                <input type="text" name="precio" placeholder="precio" required>
+                <br>
+                <input type="submit" value="Enviar">
+                <input type="hidden" name="id">
+            </form>
+        </div>
+        <div>
+            <h2>Futbolistas</h2>
+            <table class="crud-table" border=1>
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Posicion</th>
+                        <th>Precio</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                </tbody>
+            </table>
+        </div>
+    </section>
+    <template id="crud-template">
+        <tr>
+            <td class="nombre"></td>
+            <td class="posicion"></td>
+            <td class="precio"> </td>
+            
+                <button class="edit" id="editar">Editar</button>
+                <button class="delete" id="borrar">Eliminar</button>
+            </td>
+        </tr>
+    </template> 
+  
+   
+   <script src="js/futbolistas.js">
+        
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,67 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 5</title>
+    <style>
+        #primero,#segundo,#tercero,#cuarto,#quinto {
+            color:black
+        }
+    </style>
+    <script>
+        function cambiarTodos() {
+            document.getElementById("primero").style.color="red";
+            document.getElementById("segundo").style.color="red";
+            document.getElementById("tercero").style.color="red";
+            document.getElementById("cuarto").style.color="red";
+            document.getElementById("quinto").style.color="red";
+        }
+        function cambiarPrimero() {
+            document.getElementById("primero").style.color="red";
+        }
+        function cambiarPares() {
+            document.getElementById("segundo").style.color="red";
+            document.getElementById("cuarto").style.color="red";
+        }
+        function cambiarImpares() {
+            document.getElementById("primero").style.color="red";
+            document.getElementById("tercero").style.color="red";
+            document.getElementById("quinto").style.color="red";
+        }
+        function estadoOriginal() {
+            document.getElementById("primero").style.color="black";
+            document.getElementById("segundo").style.color="black";
+            document.getElementById("tercero").style.color="black";
+            document.getElementById("cuarto").style.color="black";
+            document.getElementById("quinto").style.color="black";
+            let parrafo = document.getElementsByClassName("parrafo");
+            for (let i = parrafo.length-1; i>= 0; i--) {
+            parrafo[i].parentNode.removeChild(parrafo[i])
+                
+            }
+        }
+
+        function anadirAlFinal() {
+            var x = document.createElement("P");
+            var t = document.createTextNode("Nuevo parrafo al final.");     
+            x.className="parrafo"
+            x.appendChild(t);                                           
+            document.body.appendChild(x);   
+        }
+    </script>
+</head>
+<body>
+    <p id="primero">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repudiandae maxime quasi mollitia culpa molestiae repellendus et, sint ipsa cupiditate laborum quod dicta tempore nobis voluptatem praesentium! Eius alias provident illo?</p>
+    <button onclick="cambiarTodos()">Cambiar todos</button>
+    <p id="segundo">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque impedit similique harum aspernatur sequi cupiditate maiores consequuntur, tempore repellat architecto officia ducimus laudantium distinctio ipsam beatae, quae delectus corrupti voluptatibus.</p>
+    <button onclick="cambiarPrimero()">Cambiar primero</button>
+    <p id="tercero">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vero et velit eveniet aliquid, dolor assumenda fuga quam possimus in eum ullam voluptatem reprehenderit quia facere, blanditiis sint neque. Quibusdam, deleniti?</p>
+    <button onclick="cambiarPares()">Cambiar pares</button>
+    <p id="cuarto">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque nulla tenetur, harum debitis corrupti labore? Similique illo labore nisi illum, et dolorum mollitia dolore quo porro maxime, impedit voluptatum repudiandae.</p>
+    <button onclick="cambiarImpares()">Cambiar impares</button>
+    <p id="quinto">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, sunt. Ullam minima ex ratione, officiis tempore, nisi sed hic maiores nulla eligendi, repellendus quasi incidunt labore amet commodi nemo dolores.</p>
+    <button onclick="anadirAlFinal()">AÃ±adir al final</button>
+    <button onclick="estadoOriginal()">Estado original</button>
+</body>
+</html>

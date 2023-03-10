@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      5) Sabiendo la letra de un Documento Nacional de Identidad (DNI) se
+      obtiene del resto de la división entera del número de DNI entre 23, y
+      accediendo con ese resto a la posición del siguiente array de letras
+      (comenzando en la posición 0): letras = ['T', 'R', 'W', 'A', 'G', 'M',
+      'Y', 'F', 'P', 'D', 'X', 'B', 'N', 'J', 'Z', 'S', 'Q', 'V', 'H', 'L', 'C',
+      'K', 'E', 'T']; a) Pedir un número de DNI al usuario y calcular su letra.
+      b) Pedir al usuario un DNI con letra y comprobar si ese DNI puede ser
+      correcto (letra correcta).
+    </title>
+    <script>
+      var letras = [
+        "T",
+        "R",
+        "W",
+        "A",
+        "G",
+        "M",
+        "Y",
+        "F",
+        "P",
+        "D",
+        "X",
+        "B",
+        "N",
+        "J",
+        "Z",
+        "S",
+        "Q",
+        "V",
+        "H",
+        "L",
+        "C",
+        "K",
+        "E",
+        "T",
+      ];
+
+      var numero = prompt("Introduce tu número de DNI (sin la letra)");
+      var letra = prompt("Introduce la letra de tu DNI (en mayúsculas)");
+      letra = letra.toUpperCase();
+
+      if (numero < 0 || numero > 99999999) {
+        alert("El número proporcionado no es válido");
+      } else {
+        var letraCalculada = letras[numero % 23];
+        if (letraCalculada != letra) {
+          alert("La letra o el número proporcionados no son correctos");
+        } else {
+          alert("El número de DNI y su letra son correctos");
+        }
+      }
+    </script>
+  </head>
+  <body></body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function vocalCons(cad) {
+            var cadena = cad.toLowerCase().replace(/ /g, "").split('');
+            var vocales = 0;
+       for (let i = 0; i < cadena.length; i++) {
+           if (cadena[i] == 'a'||  cadena[i] == 'e'||  cadena[i] == 'i'  ||cadena[i] == 'o' || cadena[i] == 'u') {
+               vocales += 1;
+           }
+
+       }
+       var consonantes = cadena.length - vocales;
+       return document.write("Hay " + vocales + " vocales y " + consonantes + " consonantes en la cadena " + cad);
+    }
+    </script>
+<form>
+    <input type="text" name="cad" value="Cadena" />
+    <br />
+    <input type="submit" value="Calcular" onclick="vocalCons(cad.value)" />
+</form>
+</body>
+</html>

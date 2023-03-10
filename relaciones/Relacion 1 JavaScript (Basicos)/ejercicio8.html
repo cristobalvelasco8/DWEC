@@ -1,0 +1,26 @@
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ejercicio 8</title>
+    <script type = "text/javascript">
+        var openedWindow = undefined;
+
+        function abrirVentana(url){
+            openedWindow = window.open(url, "nuevo", "directories=no, location=no, menubar=no, scrollbars=yes, statusbar=no, tittlebar=no, width=800, height=600");
+            console.log(openedWindow)
+        }
+        function cerrarVentana(){
+            if (openedWindow != undefined) openedWindow.close();
+        }
+    </script>
+</head>
+<body>
+    <h2>Abriendo paginas</h2>
+    <form>
+        <input type="button" value="Abrir" onclick="abrirVentana('http://www.marca.es')">
+        <input type="button" value="Cerrar" onclick="cerrarVentana()">
+    </form>
+</body>
+</html>

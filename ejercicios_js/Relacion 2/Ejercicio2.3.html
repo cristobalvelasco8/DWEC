@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      3) Programa que calcula y almacene en un array todos los múltiplos de 11
+      menores de 3000, los muestre y muestre la suma de todos ellos.
+    </title>
+    <script>
+      var contador = "";
+      var sum = 0;
+      for (multi = 11; multi < 3000; multi = multi + 11) {
+        contador = contador + multi + " ";
+        sum = sum + multi;
+      }
+      document.write(
+        contador + "<br>" + "\nLa Suma de todos ellos es\t=" + "\t" + sum
+      );
+    </script>
+  </head>
+  <body></body>
+</html>
